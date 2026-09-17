@@ -57,6 +57,25 @@ SELECT   country,
          avg(score) AS avg_score
 FROM     customers
 WHERE    score != 0
-GROUP BY country;
+GROUP BY country
+HAVING   avg(score) > 430;
 
 
+SELECT DISTINCT country
+FROM   customers;
+
+
+select top 3 id, country, score
+from customers;
+
+
+select top 3 *
+from customers
+order by score desc;
+
+
+select * from orders;
+
+select top 2 *
+from orders
+order by order_date desc;
